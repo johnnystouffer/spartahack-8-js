@@ -11,7 +11,13 @@ page_body = soup.body
 #print(page_body)
 
 text = soup.get_text()
+text = str(text)
 #print(text)
+print(text.index("US Top 40 Singles – JANUARY 7, 2023"))
+print(text.index("THIS WEEK’S DROP – JANUARY 7, 2023"))
 
-jan7 = text.split('JANUARY 7',1)[0]
-print(jan7)
+text = text[1782:4676]
+
+print(type(text))
+text = text.split("–•–")
+print(text)
